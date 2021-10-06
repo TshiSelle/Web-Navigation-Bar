@@ -1,75 +1,117 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
-    <title>Nav Bar</title>
+    <meta charset="UTF-8" />
+
     <link rel="stylesheet" href="styles.css" />
+
     <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="sidebar">
-      <div class="logo_content">
-        <div class="logo">
-          <i class="bx bxs-log-in-circle bx-flip-vertical"></i>
-          <div class="logo_name">Omi institute</div>
-        </div>
-        <i class="bx bx-menu bx-flip-vertical" id="btn"></i>
+      <div class="logo-details">
+        <i class="bx bxl-unsplash"></i>
+        <div class="logo_name">Omi institute</div>
+        <i class="bx bx-menu" id="btn"></i>
       </div>
-      <ul class="nav">
+      <ul class="nav-list">
         <li>
-          <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
-          </a>
-          <span class="toolTip">Dashboard</span>
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." />
+          <span class="tooltip">Search</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Home</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Home</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-info-circle"></i>
+            <span class="links_name">Tips and Tricks</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Tips and Tricks</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-chat"></i>
+            <span class="links_name">Messages</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Messages</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Analytics</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Analytics</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-folder"></i>
+            <span class="links_name">File Manager</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Files</span>
         </li>
         <li>
           <a href="#">
-            <i class="bx bx-grid-alt bx-flip-vertical"></i>
-            <span class="linksName">Dashboard</span>
+            <i class="bx bx-map-alt"></i>
+            <span class="links_name">Find them</span>
           </a>
-          <span class="toolTip">Dashboard</span>
+          <span class="tooltip">Find them</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user"></i>
+            <span class="links_name">About us</span>
+          </a>
+          <span class="tooltip">About us</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Settings</span>
+          </a>
+          <span class="tooltip">Settings</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="Drawing.jpeg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name">Omar Houssami</div>
+              <div class="job">Developer</div>
+            </div>
+          </div>
+          <a href="#">
+            <i class="bx bx-log-out" id="log_out"></i>
+            <span class="links_name">Log Out</span>
+          </a>
+          <span class="tooltip">Log Out</span>
         </li>
       </ul>
     </div>
+    <section class="home-section">
+      <div class="text">Home</div>
+    </section>
+    <script>
+      let sidebar = document.querySelector('.sidebar');
+      let closeBtn = document.querySelector('#btn');
+      let searchBtn = document.querySelector('.bx-search');
+
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+
+      searchBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>
